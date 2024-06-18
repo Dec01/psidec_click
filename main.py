@@ -1,8 +1,13 @@
 import sys
-
+from pygame import mixer
 import dearpygui.dearpygui
 import dearpygui.dearpygui as dpg
 import clicker_window
+
+mixer.init()
+mixer.music.load('Psichotropic_Logical_Confusion.mp3')
+mixer.music.play()
+
 dpg.create_context()
 
 
