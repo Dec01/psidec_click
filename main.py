@@ -36,7 +36,7 @@ def exit_program():
     dearpygui.dearpygui.stop_dearpygui()
 
 
-with dpg.window(tag="PsiPar"):
+with dpg.window(tag="PsiDec"):
     with dpg.menu_bar():
         with dpg.menu(label="Control_clicker"):
             btn_menu_start = dpg.add_menu_item(label="Run Cklicker")
@@ -53,7 +53,7 @@ with dpg.window(tag="PsiPar"):
     dpg.add_text("1.1.  press 'q' to close window")
     dpg.add_text("2. Run game")
     dpg.add_text("3. Control_clicker > Run Cklicker")
-    dpg.add_text("3.1. press 'Alt + c' to stop clicker")
+    dpg.add_text("3.1. press 'Alt + c' to stop clicker or RUN")
 
 
 
@@ -63,10 +63,10 @@ with dpg.window(tag="PsiPar"):
     btn_music = dpg.add_button(label="music")
     dpg.set_item_callback(btn_music, btn_musik_control)
 
-dpg.create_viewport(title='PsiPar', width=400, height=300)
+dpg.create_viewport(title='PsiDec', width=400, height=300)
 
 dpg.setup_dearpygui()
 dpg.show_viewport()
-dpg.set_primary_window("PsiPar", True)
+dpg.set_primary_window("PsiDec", True)
 dpg.start_dearpygui()
 dpg.destroy_context()
