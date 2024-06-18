@@ -7,8 +7,19 @@ import clicker_window
 mixer.init()
 mixer.music.load('Psichotropic_Logical_Confusion.mp3')
 mixer.music.play()
-
+isMusick = True
 dpg.create_context()
+
+
+
+def btn_musik_control():
+    global isMusick
+    if isMusick:
+        mixer.music.stop()
+        isMusick = False
+    else:
+        mixer.music.play()
+        isMusick = True
 
 
 def btn_callback_clicker_open():
@@ -49,7 +60,8 @@ with dpg.window(tag="PsiPar"):
 
     btn_exit = dpg.add_button(label="exit")
     dpg.set_item_callback(btn_exit, exit_program)
-
+    btn_music = dpg.add_button(label="music")
+    dpg.set_item_callback(btn_music, btn_musik_control)
 
 dpg.create_viewport(title='PsiPar', width=400, height=300)
 
